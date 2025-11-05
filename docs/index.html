@@ -10,6 +10,8 @@
   <link rel="icon" type="image/png" href="images/favicon-32x32.png">
   <!-- En el <head> -->
   <link rel="manifest" href="/PortafolioCristian/manifest.json">
+  <script src="main.js" defer></script>
+
 
 
   <meta name="theme-color" content="#6c4eb6">
@@ -75,8 +77,13 @@
           </p>
           <div class="botones-sobremi">
             <a href="archivos/Cv_CristianRamirezSoto.pdf" download class="btn-descargar">📄 Descargar CV</a>
-            <a href="archivos/CertificadosDuoc.pdf" download class="btn-descargar">🏅 Descargar Certificados</a>
+            <button type="button" class="btn-cert" id="btnCertificados">
+              <i class="fa-solid fa-medal"></i>
+              <span>Ver Certificados</span>
+            </button>
+
           </div>
+
 
         </div>
       </div>
@@ -191,22 +198,7 @@
         : '<i class="fas fa-sun"></i> <span>Claro</span>';
     });
   </script>
-  <script>
-    const track = document.querySelector('.carrusel-track');
-    const prev = document.querySelector('.carrusel-prev');
-    const next = document.querySelector('.carrusel-next');
-    let index = 0;
 
-    next.addEventListener('click', () => {
-      index = (index + 1) % track.children.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    });
-
-    prev.addEventListener('click', () => {
-      index = (index - 1 + track.children.length) % track.children.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    });
-  </script>
   <script>
     const menuBtn = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -289,6 +281,53 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- Modal Certificados -->
+  <div id="modalCertificados" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="tituloCert">
+    <div class="modal-overlay" data-close="cert"></div>
+
+    <div class="modal-shell" role="document">
+      <header class="modal-header">
+        <h3 id="tituloCert"><i class="fa-solid fa-medal"></i> Mis Certificados</h3>
+        <button class="modal-close" aria-label="Cerrar" data-close="cert">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
+
+      <div class="modal-body">
+        <div class="cert-grid">
+          <!-- CARD 1 -->
+          <article class="cert-card">
+            <div class="cert-media">
+              <img src="images/CertificadoIMG.png" alt="Certificados Duoc UC">
+            </div>
+            <div class="cert-info">
+              <h4>Certificados Ingeneria en Informatica</h4>
+              <p class="cert-meta">Certificados Carrera · 2021-2024</p>
+              <div class="cert-actions">
+                <a href="archivos/CertificadosDuoc.pdf" target="_blank" class="btn-mini">Ver</a>
+                <a href="archivos/CertificadosDuoc.pdf" download class="btn-mini btn-mini-ghost">Descargar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="cert-card">
+            <div class="cert-media">
+              <img src="images/LogoDuoc.png" alt="Ingenieria En Informatica">
+            </div>
+            <div class="cert-info">
+              <h4>Certificado De Titulo</h4>
+              <p class="cert-meta">Ingenieria en informatica · 2025</p>
+              <div class="cert-actions">
+                <a href="archivos/CertificadoDeTitulo.pdf" target="_blank" class="btn-mini">Ver</a>
+                <a href="archivos/CertificadoDeTitulo.pdf" download class="btn-mini btn-mini-ghost">Descargar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 

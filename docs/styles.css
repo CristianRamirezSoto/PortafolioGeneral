@@ -99,7 +99,8 @@ body {
   align-items: center;
   gap: 0.5rem;
   transition: background 0.3s ease;
-  margin-right: 5rem; /* Ajusta o elimina si es necesario */
+  margin-right: 5rem;
+  /* Ajusta o elimina si es necesario */
 }
 
 .modo-toggle:hover {
@@ -169,8 +170,10 @@ body {
 }
 
 .ilustracion {
-  flex: 0 0 auto; /* Tamaño fijo para el ícono */
+  flex: 0 0 auto;
+  /* Tamaño fijo para el ícono */
 }
+
 .texto {
   flex: 1 1 300px;
   max-width: 600px;
@@ -229,7 +232,8 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columnas fijas */
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -400,22 +404,52 @@ section h2::after {
 
 /*cv*/
 
+/* --- Botón "Descargar CV" igual al de "Ver Certificados" --- */
 .btn-descargar {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background-color: var(--primary);
-  color: white;
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
   padding: 0.8rem 1.5rem;
+  /* mismo padding que el CV */
+  background: linear-gradient(135deg, #d32f2f, #ff0000);
+  color: #fff;
+  font-weight: 900;
+  border: none;
   border-radius: 8px;
+  /* igual radio */
+  cursor: pointer;
   text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 4px 12px var(--btn-shadow);
-  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+  /* igual sombra */
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  height: 30px;
+  margin-top: 32px;
 }
 
+/* Ícono animado */
+.btn-descargar i {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Hover */
 .btn-descargar:hover {
-  background-color: rgb(122, 40, 40);
+  background: linear-gradient(135deg, #b71c1c, #ff1a1a);
   transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(211, 47, 47, 0.5);
+}
+
+/* Ícono hover */
+.btn-descargar:hover i {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Active */
+.btn-descargar:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
 }
 
 
@@ -429,7 +463,8 @@ section h2::after {
   }
 
   .cards {
-    grid-template-columns: repeat(2, 1fr); /* o 1fr si es muy angosto */
+    grid-template-columns: repeat(2, 1fr);
+    /* o 1fr si es muy angosto */
   }
 
   .nav-links {
@@ -461,13 +496,15 @@ section h2::after {
     align-items: center;
   }
 
- 
+
 }
+
 @media (max-width: 480px) {
   .servicios .cards {
     grid-template-columns: 1fr;
   }
 }
+
 /* Estilo base para el botón modo oscuro */
 .modo-toggle {
   background: transparent;
@@ -481,7 +518,7 @@ section h2::after {
   align-items: center;
   gap: 0.5rem;
   transition: background 0.3s ease;
-   margin-right: 5rem; 
+  margin-right: 5rem;
 }
 
 /* Hover efecto en escritorio */
@@ -503,7 +540,7 @@ section h2::after {
     justify-content: flex-start;
     gap: 0.5rem;
     transition: background 0.3s ease;
-    
+
   }
 
   .nav-links .modo-toggle:hover {
@@ -567,6 +604,7 @@ section h2::after {
     box-shadow: none;
   }
 }
+
 /* Sección principal */
 .sobre-mi .container {
   max-width: 1100px;
@@ -583,12 +621,14 @@ section h2::after {
 /* Ícono */
 .sobre-mi .ilustracion {
   flex-shrink: 0;
-   margin-right: 4rem; /* Ajusta el espacio entre el icono y el texto */  
+  margin-right: 4rem;
+  /* Ajusta el espacio entre el icono y el texto */
 }
 
 .emoji-circle {
   font-size: 3rem;
-  background-color: #8a2be2; /* Morado */
+  background-color: #8a2be2;
+  /* Morado */
   color: #fff;
   border-radius: 50%;
   padding: 1rem;
@@ -631,7 +671,8 @@ section h2::after {
 
 @media (max-width: 768px) {
   .sobre-mi .container {
-    display: flex; /* ← esto es CLAVE */
+    display: flex;
+    /* ← esto es CLAVE */
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -644,7 +685,8 @@ section h2::after {
   }
 
   .sobre-mi .ilustracion {
-    margin: 0 auto 1rem auto; /* CENTRADO */
+    margin: 0 auto 1rem auto;
+    /* CENTRADO */
     display: flex;
     justify-content: center;
   }
@@ -743,7 +785,8 @@ section h2::after {
   z-index: 999;
   transition: transform 0.2s ease;
   outline: none;
-  -webkit-tap-highlight-color: transparent; /* ← Elimina el cuadrado en móviles */
+  -webkit-tap-highlight-color: transparent;
+  /* ← Elimina el cuadrado en móviles */
 }
 
 #btnSubir:hover {
@@ -752,7 +795,8 @@ section h2::after {
 
 #btnSubir:focus {
   outline: none;
-  box-shadow: none; /* ← Esto evita el borde azul */
+  box-shadow: none;
+  /* ← Esto evita el borde azul */
 }
 
 #btnSubir:active {
@@ -809,27 +853,38 @@ section h2::after {
 
 /* ----- Avatar cuadrado ----- */
 .foto-perfil {
-  max-width: 200px;          /* limita ancho en desktop */
-  height: auto;              /* mantiene proporción original */
-  object-fit: contain;       /* por si algún alto se aplicara */
-  border-radius: 12px;       /* quítalo si la quieres totalmente cuadrada */
-  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  max-width: 200px;
+  /* limita ancho en desktop */
+  height: auto;
+  /* mantiene proporción original */
+  object-fit: contain;
+  /* por si algún alto se aplicara */
+  border-radius: 12px;
+  /* quítalo si la quieres totalmente cuadrada */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
   margin-right: 2rem;
 }
+
 @media (max-width: 768px) {
-  .foto-perfil { display:block; margin:0 auto 1.5rem; max-width: 160px; }
+  .foto-perfil {
+    display: block;
+    margin: 0 auto 1.5rem;
+    max-width: 160px;
+  }
 }
 
 /* Si todavía existe el emoji anterior en el DOM, lo ocultamos */
-.ilustracion .emoji-circle { 
-  display: none !important; 
+.ilustracion .emoji-circle {
+  display: none !important;
 }
 
 /* Contenedor de botones */
 .botones-sobremi {
   display: flex;
-  justify-content: center;   /* centra horizontalmente */
-  gap: 1rem;                 /* espacio entre botones */
+  justify-content: center;
+  /* centra horizontalmente */
+  gap: 1rem;
+  /* espacio entre botones */
   flex-wrap: wrap;
   margin-top: 2rem;
   width: 100%;
@@ -840,24 +895,319 @@ section h2::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;               /* espacio entre emoji y texto */
+  gap: .5rem;
+  /* espacio entre emoji y texto */
   white-space: nowrap;
   padding: .9rem 1.4rem;
   border-radius: 10px;
-  min-width: 160px;         /* para que tengan un ancho consistente */
+  min-width: 160px;
+  /* para que tengan un ancho consistente */
   text-align: center;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   .botones-sobremi {
-    flex-direction: column;   /* en móvil se apilan */
-    align-items: center;      /* se centran */
-    gap: 12px;                /* espacio vertical */
+    flex-direction: column;
+    /* en móvil se apilan */
+    align-items: center;
+    /* se centran */
+    gap: 12px;
+    /* espacio vertical */
   }
 
   .botones-sobremi .btn-descargar {
-    width: auto;              /* no ocupar todo el ancho */
-    min-width: 200px;         /* ancho fijo más cómodo */
+    width: auto;
+    /* no ocupar todo el ancho */
+    min-width: 200px;
+    /* ancho fijo más cómodo */
   }
+}
+
+:root {
+  --brand: #d32f2f;
+  --brand-600: #000000;
+  --brand-700: #d32f2f;
+  --surface: #ffffff;
+  --surface-2: rgba(0, 0, 0, .04);
+  --text: #222;
+  --shadow: 0 12px 30px rgba(0, 0, 0, .15);
+  --radius: 16px;
+}
+
+body.dark {
+  --surface: #1f1f1f;
+  --surface-2: rgba(255, 255, 255, .06);
+  --text: #e9e9e9;
+  --shadow: 0 12px 30px rgba(0, 0, 0, .6);
+}
+
+/* Botón certificados – mismo tamaño que tu .btn-descargar */
+/* --- Botón "Ver Certificados" con la misma animación que "Descargar CV" --- */
+.btn-cert {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  padding: 0.8rem 1.5rem;
+  /* mismo padding que el CV */
+  background: linear-gradient(135deg, #d32f2f, #ff0000);
+  color: #fff;
+  font-weight: 1000;
+  border: none;
+  border-radius: 8px;
+  /* igual radio */
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+  /* igual sombra */
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  height: 59px;
+  /* misma altura que el CV */
+  line-height: 1;
+  margin-top: 32px;
+}
+
+/* Ícono igual de grande que el del CV */
+.btn-cert i {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Animación al pasar el mouse */
+.btn-cert:hover {
+  background: linear-gradient(135deg, #b71c1c, #ff1a1a);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(211, 47, 47, 0.5);
+}
+
+/* Ícono animado */
+.btn-cert:hover i {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Efecto al hacer clic */
+.btn-cert:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+}
+
+
+
+
+/* ------- MODAL -------- */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  color: var(--text);
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  backdrop-filter: blur(2px);
+}
+
+.modal-shell {
+  position: relative;
+  margin: 4rem auto;
+  max-width: 1000px;
+  width: calc(100% - 2rem);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, .06);
+  overflow: hidden;
+  animation: pop .12s ease-out;
+}
+
+@keyframes pop {
+  from {
+    transform: translateY(8px);
+    opacity: .95;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
+}
+
+.modal-header h3 {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.modal-close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: inherit;
+  opacity: .7;
+  transition: opacity .2s ease;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.cert-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 820px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cert-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: .75rem;
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: .75rem;
+}
+
+
+
+body.dark .cert-media {
+  background: #fc0101;
+}
+
+/* === Ajuste visual para imágenes del modal en modo claro y oscuro === */
+.cert-media {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;      /* fondo blanco por defecto */
+  transition: background-color 0.3s ease;
+}
+
+/* fondo neutro para modo oscuro */
+body.dark .cert-media {
+  background-color: #f8f8f8;     /* gris claro que resalta sin ser chillón */
+}
+
+.cert-media img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;           /* evita cortes */
+  padding: 0.5rem;
+  background-color: #fff;        /* asegura fondo blanco detrás del logo */
+  border-radius: 6px;
+}
+
+
+
+.cert-info h4 {
+  margin: .2rem 0 0;
+  font-size: 1.05rem;
+}
+
+.cert-meta {
+  margin: .15rem 0 .6rem;
+  opacity: .8;
+  font-size: .95rem;
+}
+
+.cert-actions {
+  display: flex;
+  gap: .5rem;
+}
+
+.btn-mini {
+  padding: .45rem .75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.btn-mini:hover {
+  filter: brightness(1.05);
+}
+
+.btn-mini-ghost {
+  background: transparent;
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+body.dark .btn-mini-ghost {
+  color: #c91313;
+  border-color: #fc0101;
+}
+
+
+/* === Normalización visual: misma tipografía y tamaño para ambos botones === */
+.botones-sobremi .btn-descargar,
+.botones-sobremi .btn-cert {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+
+  /* —— tipografía idéntica —— */
+  font-family: inherit;     /* usa Poppins como el resto */
+  font-size: 0.95rem;       /* mismo tamaño de letra */
+  font-weight: 600;         /* mismo grosor */
+
+  /* —— tamaño y forma idénticos —— */
+  height: 48px;             /* MISMA ALTURA */
+  padding: 0 20px;          /* el alto lo define height */
+  border-radius: 8px;       /* mismo radio */
+  line-height: 1;           /* evita crecer por line-height */
+  text-decoration: none;
+
+  /* corrige desfases previos */
+  margin-top: 0 !important; /* elimina diferencias de margen */
+  box-sizing: border-box;
+}
+
+/* reset del <button> para que se comporte como <a> */
+.botones-sobremi .btn-cert{
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+}
+
+/* iconos del mismo porte */
+.botones-sobremi .btn-descargar i,
+.botones-sobremi .btn-cert i{
+  font-size: 1rem;
+  line-height: 1;
 }
