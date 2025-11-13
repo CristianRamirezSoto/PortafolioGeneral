@@ -1211,62 +1211,34 @@ body.dark .btn-mini-ghost {
   font-size: 1rem;
   line-height: 1;
 }
-/* --- Scroll del modal solo en celulares --- */
-@media (max-width: 600px) {
-
-  /* El overlay ocupa la pantalla y permite scroll vertical */
+/* ===== Modal responsive SOLO en móviles ===== */
+@media (max-width: 768px) {
+  /* El modal ocupa toda la pantalla y centra la tarjeta */
   .modal {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    overflow-y: auto;          /* << aquí vive el scroll */
-    padding: 1rem 0;
-  }
-
-  /* La caja del modal se limita a la altura de la pantalla */
-  .modal-shell {
-    margin: 1rem auto;
-    max-height: calc(100vh - 2rem);
-    width: calc(100% - 2rem);
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* El contenido interno es el que scrollea si se pasa */
-  .modal-body {
-    overflow-y: auto;
-  }
-}
-/* --- Modal 100% responsivo en móviles --- */
-@media (max-width: 600px) {
-
-  /* El overlay ocupa toda la pantalla y centra el modal */
-  .modal {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;      /* centrado vertical */
     padding: 1rem;
-    overflow: hidden;         /* el scroll va dentro de la caja */
   }
 
-  /* Caja del modal: nunca más alta que la pantalla */
+  /* MUY IMPORTANTE: cuando tiene .hidden, se oculta de verdad */
+  .modal.hidden {
+    display: none;
+  }
+
+  /* La “tarjeta” del modal se ajusta a la altura del viewport */
   .modal-shell {
     margin: 0;
     width: 100%;
-    max-width: 480px;         /* opcional, para que no sea gigante en tablets chicas */
-    max-height: 100vh;        /* cabe completa en la pantalla */
+    max-height: 90vh;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
   }
 
-  /* Aquí vive el scroll del contenido si es muy largo */
+  /* El contenido interno del modal se vuelve desplazable */
   .modal-body {
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
