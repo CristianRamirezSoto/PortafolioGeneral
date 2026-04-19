@@ -1,11 +1,12 @@
 {
-  "name": "Portafolio de Cristian Ramírez",
-  "short_name": "Portafolio",
+  "name": "Portafolio de Cristian Ramirez",
+  "short_name": "Cristian CV",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#f9f9f9",
-  "theme_color": "#6c4eb6",
-  "description": "Portafolio web de Cristian Ramírez - desarrollador web e ingeniero en informática.",
+  "background_color": "#f4f6fb",
+  "theme_color": "#d32f2f",
+  "description": "Portafolio profesional de Cristian Ramirez. Desarrollo web, analisis de datos y soluciones digitales.",
   "icons": [
     {
       "src": "icons/icon-192.png",
