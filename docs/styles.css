@@ -848,6 +848,10 @@ img {
   display: none;
 }
 
+.modal.hidden {
+  display: none !important;
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -1111,7 +1115,7 @@ img {
     width: 100%;
   }
 
-  .modal {
+  .modal:not(.hidden) {
     display: flex;
     align-items: center;
     justify-content: center;
