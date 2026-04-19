@@ -1,0 +1,21 @@
+{
+  "name": "Portafolio de Cristian Ramírez",
+  "short_name": "Portafolio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f9f9f9",
+  "theme_color": "#6c4eb6",
+  "description": "Portafolio web de Cristian Ramírez - desarrollador web e ingeniero en informática.",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

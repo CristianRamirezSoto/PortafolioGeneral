@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio Cristian</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/faviconRED.png">
+
+  <!-- En el <head> -->
+  <link rel="manifest" href="/PortafolioCristian/manifest.json">
+  <script src="main.js" defer></script>
+
+
+
+  <meta name="theme-color" content="#6c4eb6">
+
+
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Portafolio</div>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button id="modo-btn" class="modo-toggle">
+      <i class="fas fa-sun"></i>
+      <span>Claro</span>
+    </button>
+  </header>
+
+
+
+
+
+  <section class="hero" id="inicio">
+  <div class="hero-content">
+    
+    <div class="hero-text">
+      <h1>Hola, soy <span>Cristian Ramirez</span></h1>
+      <p>Profesional versátil con experiencia en informática, proyectos digitales, análisis de datos y gestión de soluciones en diferentes ámbitos.</p>
+      <a href="#sobre-mi" class="btn-primary">Conoce más sobre mí</a>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+  <section id="sobre-mi" class="sobre-mi">
+    <div class="container">
+      <div class="contenido">
+        <div class="ilustracion">
+          <img src="images/perfil.jpg" alt="Foto de Cristian Ramirez" class="foto-perfil">
+        </div>
+
+        <div class="texto">
+          <div class="titulo-sobremi">
+            <h2>Sobre mí</h2>
+          </div>
+          <br />
+          <p style="margin-top: 2rem;">
+            Soy Cristian Ramírez, ingeniero en informática con una visión integral que abarca desde el desarrollo web
+            hasta la gestión de proyectos y el análisis de datos.
+          </p>
+          <p>
+            Tengo experiencia en la creación de interfaces modernas y funcionales, así como en la elaboración de
+            reportes con Power BI, documentación técnica y coordinación de equipos. También he explorado áreas como
+            ciberseguridad básica y metodologías de mejora continua.
+          </p>
+          <p>
+            Me motiva seguir creciendo y aportar soluciones innovadoras que generen valor tanto en el ámbito tecnológico
+            como en otros sectores, integrando siempre eficiencia y orientación al usuario.
+          </p>
+          <div class="botones-sobremi">
+            <a href="archivos/Cv_CristianRamirezSoto.pdf" download class="btn-descargar">📄 Descargar CV</a>
+            <button type="button" class="btn-cert" id="btnCertificados">
+              <i class="fa-solid fa-medal"></i>
+              <span>Ver Certificados</span>
+            </button>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="habilidades" id="habilidades">
+    <div class="container">
+      <h2>Mis Habilidades</h2>
+      <br>
+      <div class="cards">
+        <div class="card">
+          <div class="icono">💻</div>
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, Ionic, WordPress</p>
+        </div>
+        <div class="card">
+          <div class="icono">⚙️</div>
+          <h3>Backend</h3>
+          <p>Node.js, Python, XAMPP</p>
+        </div>
+        <div class="card">
+          <div class="icono">💾</div>
+          <h3>Base de Datos</h3>
+          <p>Oracle PL/SQL, SQL, Power BI</p>
+        </div>
+        <div class="card">
+          <div class="icono">🎨</div>
+          <h3>Diseño</h3>
+          <p>UI/UX, Canva</p>
+        </div>
+        <div class="card">
+          <div class="icono">💼</div>
+          <h3>Gestión</h3>
+          <p>Organización de proyectos, trabajo en equipo, comunicación efectiva</p>
+        </div>
+        <div class="card">
+          <div class="icono">📊</div>
+          <h3>Análisis</h3>
+          <p>Power BI, reportes, visualización de datos</p>
+        </div>
+        <div class="card">
+          <div class="icono">🌍</div>
+          <h3>Idiomas</h3>
+          <p>Español nativo, inglés intermedio</p>
+        </div>
+      </div>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <div class="container">
+      <h2>Mis Servicios</h2>
+      <br>
+      <div class="cards">
+        <div class="card">
+          <div class="icono"><i class="fas fa-code"></i></div>
+          <h3>Desarrollo Web</h3>
+          <p>Webs modernas con WordPress y tecnologías adaptadas a tus necesidades.</p>
+        </div>
+        <div class="card">
+          <div class="icono"><i class="fas fa-shopping-cart"></i></div>
+          <h3>Tienda Online</h3>
+          <p>E-commerce con WooCommerce y pagos integrados.</p>
+        </div>
+        <div class="card">
+          <div class="icono"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Diseño Responsivo</h3>
+          <p>Compatible con móviles, tablets y escritorio.</p>
+        </div>
+        <div class="card">
+          <div class="icono"><i class="fas fa-file-alt"></i></div>
+          <h3>Documentación Técnica</h3>
+          <p>Redacción de informes, especificaciones y manuales de proyectos TI.</p>
+        </div>
+        <div class="card">
+          <div class="icono"><i class="fas fa-chart-line"></i></div>
+          <h3>Análisis de Datos</h3>
+          <p>Elaboración de reportes, dashboards y visualización de información.</p>
+        </div>
+        <div class="card">
+          <div class="icono"><i class="fas fa-tasks"></i></div>
+          <h3>Gestión de Procesos</h3>
+          <p>Mejora continua, coordinación de equipos y optimización de flujos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Redes Sociales -->
+  <section class="contacto" id="contacto">
+    <h2>Contáctame</h2>
+    <div class="social-icons">
+      <a href="mailto:cristianramirezsoto2003@gmail.com" title="Correo"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/56920557857" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/lcrn_xl" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+
+
+  <script>
+    const btn = document.getElementById('modo-btn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      btn.innerHTML = isDark
+        ? '<i class="fas fa-moon"></i> <span>Oscuro</span>'
+        : '<i class="fas fa-sun"></i> <span>Claro</span>';
+    });
+  </script>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/PortafolioCristian/sw.js')
+
+        .then(reg => console.log('✅ SW registrado', reg))
+        .catch(err => console.error('❌ SW error', err));
+    }
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+      if (isStandalone) {
+        const whatsappBtn = document.querySelector('.btn-flotante');
+        if (whatsappBtn) {
+          whatsappBtn.style.display = 'none';
+        }
+      }
+    });
+  </script>
+
+
+  <script>
+    let deferredPrompt;
+
+    // Captura el evento que dispara la posibilidad de instalar
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault(); // Evita que aparezca automáticamente
+      deferredPrompt = e;
+
+      const installBtn = document.getElementById('btnInstalar');
+      installBtn.style.display = 'inline-block';
+
+      installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt(); // Muestra el diálogo de instalación
+          const result = await deferredPrompt.userChoice;
+
+          if (result.outcome === 'accepted') {
+            console.log('App instalada');
+          } else {
+            console.log('Instalación cancelada');
+          }
+
+          deferredPrompt = null;
+          installBtn.style.display = 'none';
+        }
+      });
+    });
+
+    // Oculta el botón si ya está instalada
+    window.addEventListener('DOMContentLoaded', () => {
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+      if (isStandalone) {
+        document.getElementById('btnInstalar')?.remove();
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnSubir">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <a href="https://wa.me/56933542751" target="_blank" class="btn-flotante" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Modal Certificados -->
+  <div id="modalCertificados" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="tituloCert">
+    <div class="modal-overlay" data-close="cert"></div>
+
+    <div class="modal-shell" role="document">
+      <header class="modal-header">
+        <h3 id="tituloCert"><i class="fa-solid fa-medal"></i> Mis Certificados</h3>
+        <button class="modal-close" aria-label="Cerrar" data-close="cert">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
+
+      <div class="modal-body">
+        <div class="cert-grid">
+          <!-- CARD 1 -->
+          <article class="cert-card">
+            <div class="cert-media">
+              <img src="images/CertificadoIMG.png" alt="Certificados Duoc UC">
+            </div>
+            <div class="cert-info">
+              <h4>Certificados de Ingenieria en informatica y telecomunicaciones</h4>
+              <p class="cert-meta">Certificados Carrera · 2021-2024</p>
+              <div class="cert-actions">
+                <a href="archivos/CertificadosDuoc.pdf" target="_blank" class="btn-mini">Ver</a>
+                <a href="archivos/CertificadosDuoc.pdf" download class="btn-mini btn-mini-ghost">Descargar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="cert-card">
+            <div class="cert-media">
+              <img src="images/LogoDuoc.png" alt="Ingenieria En Informatica">
+            </div>
+            <div class="cert-info">
+              <h4>Certificado De Titulo en informatica y telecomuncaciones</h4>
+              <p class="cert-meta">Ingenieria en informatica · 2025</p>
+              <div class="cert-actions">
+                <a href="archivos/CertificadoDeTitulo.pdf" target="_blank" class="btn-mini">Ver</a>
+                <a href="archivos/CertificadoDeTitulo.pdf" download class="btn-mini btn-mini-ghost">Descargar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
