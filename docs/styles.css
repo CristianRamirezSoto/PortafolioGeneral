@@ -844,6 +844,12 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+@media (min-width: 769px) {
+  .install-btn {
+    display: none !important;
+  }
+}
+
 .hidden {
   display: none;
 }

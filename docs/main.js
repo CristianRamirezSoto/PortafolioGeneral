@@ -18,6 +18,8 @@
 
   let deferredPrompt = null;
   let lastFocusedElement = null;
+  const mobileInstallQuery = window.matchMedia('(max-width: 768px)');
+  const canShowInstallButton = () => mobileInstallQuery.matches;
 
   const syncHeaderHeight = () => {
     const header = document.querySelector('.navbar');
@@ -195,9 +197,14 @@
     event.preventDefault();
     deferredPrompt = event;
 
-    if (installBtn) {
+    if (installBtn && canShowInstallButton()) {
       installBtn.style.display = 'inline-flex';
     }
+  });
+
+  mobileInstallQuery.addEventListener?.('change', () => {
+    if (!installBtn) return;
+    installBtn.style.display = deferredPrompt && canShowInstallButton() ? 'inline-flex' : 'none';
   });
 
   installBtn?.addEventListener('click', async () => {
