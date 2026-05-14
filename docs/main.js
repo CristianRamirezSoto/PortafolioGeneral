@@ -168,6 +168,27 @@
 
   btnCert?.addEventListener('click', openModal);
   modalCloseButtons.forEach((el) => el.addEventListener('click', closeModal));
+  modalCloseButtons.forEach((el) => {
+    el.addEventListener('touchend', (event) => {
+      event.preventDefault();
+      closeModal();
+    }, { passive: false });
+  });
+
+  // Respaldo en mobile: cierre delegado por click/touch/pointer.
+  document.addEventListener('click', (event) => {
+    if (!modalCert || modalCert.classList.contains('hidden')) return;
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (target.closest('[data-close="cert"]')) closeModal();
+  });
+
+  document.addEventListener('pointerup', (event) => {
+    if (!modalCert || modalCert.classList.contains('hidden')) return;
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (target.closest('[data-close="cert"]')) closeModal();
+  });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && modalCert && !modalCert.classList.contains('hidden')) {

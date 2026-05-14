@@ -909,6 +909,7 @@ img {
   color: var(--text);
   font-size: 1.08rem;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .modal-body {
